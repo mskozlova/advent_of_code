@@ -17,13 +17,10 @@ print(tick_vals)
 pixels = []
 for i in range(6):
     for j in range(40):
-        
         if abs(tick_vals[i * 40 + j] - j) <= 1:
             pixels.append("£")
         else:
             pixels.append(".")
 
 for i in range(6):
-    print("".join(pixels[i * 40:(i + 1) * 40]))
-
-
+    print("".join(pixels[i * 40 : (i + 1) * 40]))

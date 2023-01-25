@@ -25,11 +25,7 @@ code_2_points = {
     "Z": 6,
 }
 
-figure_2_points = {
-    "A": 1,
-    "B": 2,
-    "C": 3
-}
+figure_2_points = {"A": 1, "B": 2, "C": 3}
 
 with open("input.txt", "r") as file:
     score = 0

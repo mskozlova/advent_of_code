@@ -10,7 +10,10 @@ def move_head(rope, direction):
 
 
 def make_move(rope, knot):
-    if abs(rope[knot - 1][0] - rope[knot][0]) <= 1 and abs(rope[knot - 1][1] - rope[knot][1]) <= 1:
+    if (
+        abs(rope[knot - 1][0] - rope[knot][0]) <= 1
+        and abs(rope[knot - 1][1] - rope[knot][1]) <= 1
+    ):
         return
 
     if rope[knot - 1][0] == rope[knot][0] and rope[knot - 1][1] > rope[knot][1]:
@@ -42,7 +45,6 @@ def make_move(rope, knot):
         rope[knot][0] -= 1
         rope[knot][1] -= 1
         return
-
 
 
 def draw_positions(rope, max_coord):

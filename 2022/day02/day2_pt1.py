@@ -19,11 +19,7 @@ def play_game(code1, code2):
         return 6
 
 
-code_2_points = {
-    "X": 1,
-    "Y": 2,
-    "Z": 3
-}
+code_2_points = {"X": 1, "Y": 2, "Z": 3}
 
 with open("input.txt", "r") as file:
     score = 0

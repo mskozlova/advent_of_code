@@ -1,6 +1,7 @@
 import json
 from itertools import zip_longest
 
+
 def compare(lst1, lst2):
     for l1, l2 in zip_longest(lst1, lst2, fillvalue=None):
         if l1 is None:
@@ -23,6 +24,7 @@ def compare(lst1, lst2):
                 return False
 
     return True
+
 
 correct_cnt = 0
 

@@ -10,6 +10,7 @@ print()
 
 print(len(trees), len(trees[0]))
 
+
 def count_visibility(x, y, direction):
     if direction == "up":
         for i in range(1, max(len(trees), len(trees[0])) + 1):
@@ -52,24 +53,29 @@ def count_visibility(x, y, direction):
             else:
                 return i - 1
 
+
 max_visibility = 0
 visibilities = []
 
 for x in range(len(trees)):
     row = []
     for y in range(len(trees[0])):
-        current_visibility = count_visibility(x, y, "up") * \
-            count_visibility(x, y, "down") * \
-            count_visibility(x, y, "left") * \
-            count_visibility(x, y, "right")
+        current_visibility = (
+            count_visibility(x, y, "up")
+            * count_visibility(x, y, "down")
+            * count_visibility(x, y, "left")
+            * count_visibility(x, y, "right")
+        )
         max_visibility = max(max_visibility, current_visibility)
-        row.append([
-            count_visibility(x, y, "up"),
-            count_visibility(x, y, "down"),
-            count_visibility(x, y, "left"),
-            count_visibility(x, y, "right")
-        ])
- 
+        row.append(
+            [
+                count_visibility(x, y, "up"),
+                count_visibility(x, y, "down"),
+                count_visibility(x, y, "left"),
+                count_visibility(x, y, "right"),
+            ]
+        )
+
     visibilities.append(row)
 
 for row in visibilities:

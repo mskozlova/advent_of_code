@@ -13,5 +13,3 @@ with open("input.txt", "r") as file:
             break
 
 print(sum([tick_vals[tick - 1] * tick for tick in target_ticks]))
-
-

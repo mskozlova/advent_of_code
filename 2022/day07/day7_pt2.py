@@ -20,7 +20,7 @@ with open("input.txt", "r") as file:
         elif line[0].isdigit():
             size, _ = line.split(" ")
             for i in range(len(stack)):
-                directories["/".join(stack[:i + 1])] += int(size)
+                directories["/".join(stack[: i + 1])] += int(size)
 
         else:
             print("unknown type of line: {}".format(line))

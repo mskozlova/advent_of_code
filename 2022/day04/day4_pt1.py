@@ -6,8 +6,9 @@ with open("input.txt", "r") as file:
         int1_start, int1_end = list(map(int, int1.split("-")))
         int2_start, int2_end = list(map(int, int2.split("-")))
 
-        if (int1_start >= int2_start and int1_end <= int2_end) or \
-                (int1_start <= int2_start and int1_end >= int2_end):
+        if (int1_start >= int2_start and int1_end <= int2_end) or (
+            int1_start <= int2_start and int1_end >= int2_end
+        ):
             n_intervals += 1
 
 print(n_intervals)

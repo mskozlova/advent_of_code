@@ -42,7 +42,6 @@ def make_move(x_head, y_head, x_tail, y_tail, direction):
         return x_head, y_head, x_tail, y_tail
 
 
-
 def draw_positions(x_head, y_head, x_tail, y_tail, max_coord):
     for i in range(max_coord):
         row = []
@@ -69,7 +68,9 @@ with open("input.txt", "r") as file:
 
         print(direction, num)
         for _ in range(num):
-            x_head, y_head, x_tail, y_tail = make_move(x_head, y_head, x_tail, y_tail, direction)
+            x_head, y_head, x_tail, y_tail = make_move(
+                x_head, y_head, x_tail, y_tail, direction
+            )
             positions.add((x_tail, y_tail))
 
 print(len(positions))

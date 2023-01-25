@@ -12,7 +12,7 @@ class Monkey:
         self.if_true = int(lines[4][-1])
         self.if_false = int(lines[5][-1])
         self.throw_cnt = 0
-        
+
     def __parse_rule(self, rule_line):
         operation = rule_line[21]
         second_number = None
