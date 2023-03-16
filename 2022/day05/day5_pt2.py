@@ -28,9 +28,9 @@ def parse_move(line):
     return number, move
 
 
-def apply_move(stacks, move):
-    box = stacks[move[0]].pop()
-    stacks[move[1]].append(box)
+def apply_move(stacks, move, number):
+    stacks[move[1]].extend(stacks[move[0]][-number:])
+    stacks[move[0]] = stacks[move[0]][:-number]
 
 
 def get_upper_layer(stacks):
@@ -51,7 +51,6 @@ with open("input.txt", "r") as file:
             stack_lines.append(line)
         else:
             number, move = parse_move(line.strip())
-            for _ in range(number):
-                apply_move(stacks, move)
+            apply_move(stacks, move, number)
 
 print(get_upper_layer(stacks))
