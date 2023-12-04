@@ -1,10 +1,10 @@
 def parse_card(line):
-    number_lists = line[line.rindex(":") + 1:].split("|")
+    number_lists = line[line.rindex(":") + 1 :].split("|")
     assert len(number_lists) == 2, f"Too many values after | split: {line}"
-    
+
     winning_set = set(map(int, number_lists[0].strip().split()))
     our_set = set(map(int, number_lists[1].strip().split()))
-    
+
     return winning_set, our_set
 
 
