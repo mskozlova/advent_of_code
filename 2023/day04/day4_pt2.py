@@ -10,7 +10,6 @@ def parse_card(line):
 
 total_cards = 0
 card_copies = dict()
-is_start = True
 
 with open("input.txt", "r") as file:
     for i, line in enumerate(file.readlines()):
