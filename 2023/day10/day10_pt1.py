@@ -74,7 +74,7 @@ def find_next_tile(current_row, current_col, visited_tiles, sketch):
         + f"\nVisited tiles: {visited_tiles}"
     )
 
-    if len(next_tiles) == 0: # we reached the start
+    if len(next_tiles) == 0:  # we reached the start
         return None, None
     return next_tiles[0]
 
