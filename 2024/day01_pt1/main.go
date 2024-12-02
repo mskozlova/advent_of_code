@@ -11,7 +11,7 @@ import (
 
 func main() {
 	total_diff := 0
-	input, _ := os.ReadFile("2024/day01/input.txt")
+	input, _ := os.ReadFile("2024/day01_pt1/input.txt")
 	left_list := make([]int, 0, 0)
 	right_list := make([]int, 0, 0)
 

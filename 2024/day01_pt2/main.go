@@ -26,7 +26,7 @@ func getValue(counter *map[int]int, id int) int {
 
 func main() {
 	similarity_score := 0
-	input, _ := os.ReadFile("2024/day01/input.txt")
+	input, _ := os.ReadFile("2024/day01_pt2/input.txt")
 	left_ids := make(map[int]int)
 	right_ids := make(map[int]int)
 
