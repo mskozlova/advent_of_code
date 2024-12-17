@@ -31,7 +31,6 @@ func main() {
 	queue := []status{{A: 0, i: 0}}
 
 	for len(queue) > 0 {
-		fmt.Println(queue)
 		s := queue[0]
 		queue = queue[1:]
 
@@ -39,12 +38,10 @@ func main() {
 			A := 8*s.A + A_modulo_8
 			B_cand := A_modulo_8 ^ 5 ^ 6 ^ (A / pow(2, A_modulo_8^5))
 			if B_cand%8 == program[s.i] {
-
-				queue = append(queue, status{A: A, i: s.i + 1})
-
 				if s.i+1 == len(program) {
 					fmt.Printf("A: %d\tB: %d\tOUT: %d\n", A, B_cand, B_cand%8)
-					return
+				} else {
+					queue = append(queue, status{A: A, i: s.i + 1})
 				}
 			}
 		}
