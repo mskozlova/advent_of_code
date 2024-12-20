@@ -163,11 +163,6 @@ func countCheats(field []string, start, end coord) map[int]int {
 					value = 0
 				}
 				cheat_secs[total_steps] = value + 1
-
-				if total_steps == 84-66 {
-					fmt.Printf("Cheat %d, %d -> %d, %d\n", row, col, cheat.row, cheat.col)
-					fmt.Printf("From start %d, to end %d, cheat %d\n\n", steps_to_here, steps_to_finish, cheat_steps)
-				}
 			}
 		}
 	}
