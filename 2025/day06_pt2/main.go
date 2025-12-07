@@ -70,20 +70,6 @@ func parseProblems(input string) []problem {
 	return operations
 }
 
-func createProblems(numbers [][]int64, operations []string) []problem {
-	problems := make([]problem, 0, 0)
-	// for i := range len(operations) {
-	// 	problems = append(problems, problem{make([]int64, 0, 0), operations[i]})
-	// }
-
-	// for _, num_set := range numbers {
-	// 	for i, num := range num_set {
-	// 		problems[i].numbers = append(problems[i].numbers, num)
-	// 	}
-	// }
-	return problems
-}
-
 func (p *problem) Solve() int64 {
 	var answer int64 = 0
 	if p.op == "*" {
